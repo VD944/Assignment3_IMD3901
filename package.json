@@ -4,6 +4,7 @@
   "description": "Multi-User Interaction for assignment 3 IMD3901",
   "main": "app.js",
   "dependencies": {
+    "express": "^4.17.1",
     "socket.io": "^2.3.0"
   },
   "devDependencies": {},

@@ -1,19 +1,15 @@
 AFRAME.registerComponent('test',{
     schema : {},
     init : function() {
-        const Context_AF = this; //refers to "this" component
+        const Context_AF = this;
 
-        //add event listener for "click" event on whatever entity has this component
+        //Add event listeners
         Context_AF.el.addEventListener('click', function(event) {
             console.log("TESTTT");
             socket.emit('red');
         });
 
-        //when "hovering" make larger
         Context_AF.el.addEventListener('mouseenter', function(event) {
-            //el = element or entity
-            //object3D = three.js 3D geometry object
-            //scale = three.js vector that represents scale
             Context_AF.el.object3D.scale.set(1.1, 1.1, 1.1);
         });
 
