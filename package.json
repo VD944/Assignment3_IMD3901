@@ -1,0 +1,23 @@
+{
+  "name": "assignment_imd3901",
+  "version": "1.0.0",
+  "description": "Multi-User Interaction for assignment 3 IMD3901",
+  "main": "app.js",
+  "dependencies": {
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VD944/Assignment3_IMD3901.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VD944/Assignment3_IMD3901/issues"
+  },
+  "homepage": "https://github.com/VD944/Assignment3_IMD3901#readme"
+}
