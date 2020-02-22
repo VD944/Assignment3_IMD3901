@@ -5,7 +5,7 @@ AFRAME.registerComponent('test',{
 
         //Add event listeners
         Context_AF.el.addEventListener('click', function(event) {
-            console.log("TESTTT");
+            console.log("clicked");
             socket.emit('red');
         });
 
