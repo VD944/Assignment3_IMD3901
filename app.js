@@ -18,7 +18,7 @@ app.get('/color', function(req,res) {
 });
 
 app.get('/controller', function(req,res) {
-    res.sendFile(__dirname + '/public/controller.html');
+    res.sendFile(__dirname + '/public/game.html');
 });
 
 //websocket events
