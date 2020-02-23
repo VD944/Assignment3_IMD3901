@@ -8,9 +8,7 @@
         <script src="/js/test.js"></script>  
     </head>
     <body>
-        <h1>VictorDysayon_IMD3901A3</h1>
-        <a href="/color.html">Color Page</a>
-        
+
         <script>
             let socket = io();
             socket.on('connect', function() {
@@ -25,10 +23,33 @@
            
             <a-entity environment="preset: forest"></a-entity>
 
-            <a-entity   id="box"
+            <a-entity   id="indicator"
+                        geometry="primitive: sphere; radius: 0.5"
+                        position="0.0 2.0 -1.0"
+                        material="color: white"
+                        test="" >
+            </a-entity>
+
+            <a-entity   id="boxBlue"
                         geometry="primitive: box; width: 1; height: 1; depth: 1"
-                        position="0.0 1.0 3.0"
+                        position="-2.0 0.0 -0.5"
                         material="color: blue"
+                        class="clickable"
+                        test="" >
+            </a-entity>
+
+            <a-entity   id="boxRed"
+                        geometry="primitive: box; width: 1; height: 1; depth: 1"
+                        position="0.0 0.0 -0.5"
+                        material="color: red"
+                        class="clickable"
+                        test="" >
+            </a-entity>
+
+            <a-entity   id="boxGreen"
+                        geometry="primitive: box; width: 1; height: 1; depth: 1"
+                        position="2.0 0.0 -0.5"
+                        material="color: green"
                         class="clickable"
                         test="" >
             </a-entity>
