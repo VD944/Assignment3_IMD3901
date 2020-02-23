@@ -5,7 +5,11 @@
         <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
         <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
         <script src="/socket.io/socket.io.js"></script>
-        <script src="/js/test.js"></script>  
+        <script src="/js/red.js"></script>  
+        <script src="/js/blue.js"></script>  
+        <script src="/js/green.js"></script>  
+
+        
     </head>
     <body>
 
@@ -13,6 +17,15 @@
             let socket = io();
             socket.on('connect', function() {
                 console.log('Game.html connected');
+            });
+
+            socket.on('color_change', function(data){
+                let colorStr = 'rgb(' + data.r + ',' + data.g + ',' + data.b + ')'; //just parsing into a form that we can use later
+                console.log('color received: ' + colorStr);
+
+                //Set indicator to colour
+                let indicatorSphere = document.querySelector("#indicator");
+                indicatorSphere.setAttribute('material', 'color:' + colorStr );
             });
         </script>
         
@@ -26,8 +39,7 @@
             <a-entity   id="indicator"
                         geometry="primitive: sphere; radius: 0.5"
                         position="0.0 2.0 -1.0"
-                        material="color: white"
-                        test="" >
+                        material="color: white">
             </a-entity>
 
             <a-entity   id="boxBlue"
@@ -35,7 +47,7 @@
                         position="-2.0 0.0 -0.5"
                         material="color: blue"
                         class="clickable"
-                        test="" >
+                        blue="" >
             </a-entity>
 
             <a-entity   id="boxRed"
@@ -43,7 +55,7 @@
                         position="0.0 0.0 -0.5"
                         material="color: red"
                         class="clickable"
-                        test="" >
+                        red="" >
             </a-entity>
 
             <a-entity   id="boxGreen"
@@ -51,7 +63,7 @@
                         position="2.0 0.0 -0.5"
                         material="color: green"
                         class="clickable"
-                        test="" >
+                        green="" >
             </a-entity>
 
             <!-- Camera -->

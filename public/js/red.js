@@ -1,11 +1,11 @@
-AFRAME.registerComponent('test',{
+AFRAME.registerComponent('red',{
     schema : {},
     init : function() {
         const Context_AF = this;
 
         //Add event listeners
         Context_AF.el.addEventListener('click', function(event) {
-            console.log("clicked");
+            console.log("clickedR");
             socket.emit('red');
         });
 
@@ -18,5 +18,4 @@ AFRAME.registerComponent('test',{
         });
 
     },
-
 });
